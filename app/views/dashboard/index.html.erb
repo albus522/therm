@@ -1,8 +1,9 @@
 <div class="error"><%= @set_temp.errors.full_messages.join(", ") %></div>
 <%= form_for @set_temp, url: set_temp_path do |f| %>
   <%= f.label :mode %>
-  <%= f.radio_button :mode, "cooling" %> Cooling
+  <%= f.radio_button :mode, "cooling" %> Cooling<br>
   <%= f.radio_button :mode, "heating" %> Heating
+  <br>
   <br>
   <%= f.label :temp, "Set Temp" %>
   <%= f.number_field :temp, min: 50, max: 85 %>
