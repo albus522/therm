@@ -52,8 +52,8 @@ legend {
     padding: .2em 0;
     border-radius: 10px 0 0 10px;
     margin: 0;
-    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.4);
-    background: #ccc;
+    box-shadow: inset -1px -1px 5px rgba(32, 32, 32, 0.3);
+    background: #fff;
     font-size: 40px;
     font-family: "AppleColorEmoji";
     text-align: center;
@@ -62,8 +62,13 @@ legend {
     border-radius: 0 10px 10px  0;
   }
   .radio_pair input:checked + label {
-    box-shadow: inset -1px -1px 5px rgba(32, 32, 32, 0.3);
-    background: #fff;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.4);
+    background: #ccc;
+  }
+  .radio_pair .emoji {
+    display: block;
+    font-size: 16px;
+    -webkit-transform: scale(2.5) translateY(14px);
   }
 .status {
   margin: 0 .5em;
