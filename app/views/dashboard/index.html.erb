@@ -18,6 +18,6 @@
     </div>
   </fieldset>
   <%= f.label :temp, "Set Temp" %>
-  <%= f.number_field :temp, min: 50, max: 85, size: 3 %>
+  <%= f.number_field :temp, min: 50, max: 85, size: 3, pattern: "\\d*" %>
   <%= f.submit "Set" %>
 <% end %>
