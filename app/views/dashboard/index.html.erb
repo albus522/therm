@@ -1,4 +1,8 @@
 <div class="error"><%= @set_temp.errors.full_messages.join(", ") %></div>
+<% if @curr_temp %>
+<div>Current Temp: <%= "%0.1f" % @curr_temp %></div>
+<br>
+<% end %>
 <%= form_for @set_temp, url: set_temp_path do |f| %>
   <%= f.label :mode %>
   <%= f.radio_button :mode, "cooling" %> Cooling<br>
