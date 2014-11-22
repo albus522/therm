@@ -14,3 +14,5 @@ end
 gem 'turbolinks'
 
 gem 'bcrypt', '~> 3.1.7'
+
+gem 'thin'
