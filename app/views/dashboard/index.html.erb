@@ -1,16 +1,23 @@
 <div class="error"><%= @set_temp.errors.full_messages.join(", ") %></div>
 <% if @curr_temp %>
-<div>Current Temp: <%= "%0.1f" % @curr_temp %></div>
-<br>
+  <div class="status">Current Temp: <%= "%0.1f" % @curr_temp %></div>
 <% end %>
+
 <%= form_for @set_temp, url: set_temp_path do |f| %>
-  <%= f.label :mode %>
-  <%= f.radio_button :mode, "cooling" %> Cooling<br>
-  <%= f.radio_button :mode, "heating" %> Heating
-  <br>
-  <br>
+  <fieldset>
+    <legend>Mode</legend>
+    <div class="radio_pair">
+      <%= f.radio_button :mode, "cooling", checked: "checked" %> 
+      <label for="set_temp_mode_cooling">
+        <span class="emoji">❄️</span>
+      </label>
+      <%= f.radio_button :mode, "heating" %>
+      <label for="set_temp_mode_heating">
+        <span class="emoji">🔥</span>
+      </label>
+    </div>
+  </fieldset>
   <%= f.label :temp, "Set Temp" %>
-  <%= f.number_field :temp, min: 50, max: 85 %>
-  <br>
+  <%= f.number_field :temp, min: 50, max: 85, size: 3, pattern: "\\d*" %>
   <%= f.submit "Set" %>
 <% end %>

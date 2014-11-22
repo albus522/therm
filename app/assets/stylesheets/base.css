@@ -4,13 +4,73 @@
 @viewport{ width: device-width;}
 
 body {
+  padding: 20px;
   color: #666;
   font: normal 16px sans-serif;
 }
 
+fieldset {
+  padding: 0;
+  border: 0;
+  margin: 1em 0;
+}
+ fieldset label {
+   font-size: 1rem;
+ }
 input {
   font-size: 16px;
 }
-label {
+input[type=number] {
   display: block;
+  margin: .2em auto;
+  font-size: 4rem;
+}
+input[type=submit] {
+  display: block;
+  width: 80%;
+  margin: 1em auto;
+}
+label,
+legend {
+  display: block;
+  margin: .5em 0;
+  font-size: 1.2rem;
+}
+.radio_pair {
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  font-size: 0.1px;
+}
+  .radio_pair > input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+  }
+  .radio_pair > label {
+    display: inline-block;
+    width: 50%;
+    height: 1em;
+    padding: .2em 0;
+    border-radius: 10px 0 0 10px;
+    margin: 0;
+    box-shadow: inset -1px -1px 5px rgba(32, 32, 32, 0.3);
+    background: #fff;
+    font-size: 40px;
+    font-family: "AppleColorEmoji";
+    text-align: center;
+  }
+  .radio_pair label ~ label {
+    border-radius: 0 10px 10px  0;
+  }
+  .radio_pair input:checked + label {
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.4);
+    background: #ccc;
+  }
+  .radio_pair .emoji {
+    display: block;
+    font-size: 16px;
+    -webkit-transform: scale(2.5) translateY(14px);
+  }
+.status {
+  margin: 0 .5em;
+  font-size: 2rem;
 }
