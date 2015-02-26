@@ -9,11 +9,11 @@
     <div class="radio_pair">
       <%= f.radio_button :mode, "cooling", checked: "checked" %> 
       <label for="set_temp_mode_cooling">
-        <span class="emoji">❄️</span>
+        <%= image_tag "flake.svg", alt: "Cool" %>
       </label>
       <%= f.radio_button :mode, "heating" %>
       <label for="set_temp_mode_heating">
-        <span class="emoji">🔥</span>
+        <%= image_tag "flame.svg", alt: "Heat" %>
       </label>
     </div>
   </fieldset>
