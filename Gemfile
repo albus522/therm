@@ -11,6 +11,8 @@ group :assets do
   gem 'jquery-rails'
 end
 
+gem 'font-awesome-rails'
+
 gem 'turbolinks'
 
 gem 'bcrypt', '~> 3.1.7'
