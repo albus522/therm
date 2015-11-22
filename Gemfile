@@ -18,3 +18,9 @@ gem 'turbolinks'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'thin'
+
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+end
