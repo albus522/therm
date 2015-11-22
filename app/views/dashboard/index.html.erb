@@ -1,6 +1,6 @@
 <div class="error"><%= @set_temp.errors.full_messages.join(", ") %></div>
-<% if @curr_temp %>
-  <div class="status">Current Temp: <%= "%0.1f" % @curr_temp %></div>
+<% if @reading %>
+  <div class="status">Current Temp: <%= "%0.1f" % @reading.temp_f %></div>
 <% end %>
 
 <%= form_for @set_temp, url: set_temp_path do |f| %>

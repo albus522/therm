@@ -8,7 +8,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= @reading.try(:state).to_s.dasherize %>">
   <div class="notice success"><%= flash[:success] %></div>
 
   <%= yield %>
