@@ -8,20 +8,27 @@ class ThermControl
       begin
         set_temp = SetTemp.first
         temp = Temp.discover.values.first.f
+        r = Reading.new(temp_f: temp)
 
         if set_temp.cooling?
           if temp < (set_temp.temp - SWING)
+            r.state = "off"
             pin.off
           elsif temp > (set_temp.temp + SWING)
+            r.state = "cooling"
             pin.on
           end
         else
           if temp > (set_temp.temp + SWING)
+            r.state = "off"
             pin.off
           elsif temp < (set_temp.temp - SWING)
+            r.state = "heating"
             pin.on
           end
         end
+
+        r.save
 
         sleep 5
       rescue => e
