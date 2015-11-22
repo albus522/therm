@@ -18,8 +18,10 @@
     </div>
   </fieldset>
   <%= f.label :temp, "Set Temp" %>
-  <%= link_to fa_icon("chevron-up"), "#", class: "temp-action increase-temp" %>
   <%= f.number_field :temp, min: 50, max: 85, size: 2, pattern: "\\d*" %>
-  <%= link_to fa_icon("chevron-down"), "#", class: "temp-action decrease-temp" %>
+  <div class="temp-action-group">
+    <%= link_to fa_icon("chevron-down"), "#", class: "temp-action decrease-temp" %>
+    <%= link_to fa_icon("chevron-up"), "#", class: "temp-action increase-temp" %>
+  </div>
   <%= f.submit "Set" %>
 <% end %>
