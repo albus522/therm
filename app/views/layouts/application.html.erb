@@ -3,13 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>Therm</title>
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= @reading.try(:state).to_s.dasherize %>">
-  <div class="notice success"><%= flash[:success] %></div>
 
   <%= yield %>
 
