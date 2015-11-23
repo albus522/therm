@@ -9,6 +9,7 @@ class ThermControl
         set_temp = SetTemp.first
         temp = Temp.discover.values.first.f
         r = Reading.new(temp_f: temp)
+        r.set_temp = set_temp.temp
 
         if set_temp.cooling?
           if temp < (set_temp.temp - SWING)
