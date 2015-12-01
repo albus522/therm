@@ -52,6 +52,9 @@ input[type=number] {
   border: none;
   margin: 10px;
 }
+.temp-action:disabled {
+  opacity: 0.25;
+}
 .temp-action img {
   width: 64px;
 }
