@@ -52,6 +52,9 @@ input[type=number] {
   border: none;
   margin: 10px;
 }
+.temp-action img {
+  width: 64px;
+}
 input[type=submit] {
   display: block;
   width: 80%;
