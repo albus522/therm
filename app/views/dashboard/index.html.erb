@@ -1,3 +1,6 @@
+<% if flash[:success] %>
+<div class="update-success"><%= image_tag "green-check.svg" %></div>
+<% end %>
 <div class="error"><%= @set_temp.errors.full_messages.join(", ") %></div>
 <% if @reading %>
   <div class="status">Current Temp: <%= "%0.1f" % @reading.temp_f %></div>
