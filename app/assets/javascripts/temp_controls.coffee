@@ -7,13 +7,13 @@ $ () ->
     increase = (this.value >= this.getAttribute("max")) ? "disabled" : false
     $(".increase-temp").attr("disabled", increase)
 
-  $(".increase-temp").on "click touchend", (e) ->
+  $(document).on "click touchend", ".increase-temp:not([disabled=disabled])", (e) ->
     e.preventDefault()
     field = document.getElementById("set_temp_temp")
     field.value = parseInt(field.value, 10) + 1
     field.dispatchEvent(change)
 
-  $(".decrease-temp").on "click touchend", (e) ->
+  $(document).on "click touchend", ".decrease-temp:not([disabled=disabled])",  (e) ->
     e.preventDefault()
     field = document.getElementById("set_temp_temp")
     field.value = parseInt(field.value, 10) - 1
