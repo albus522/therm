@@ -8,11 +8,13 @@ $ () ->
     $(".increase-temp").attr("disabled", increase)
 
   $(".increase-temp").on "click touchend", (e) ->
+    e.preventDefault()
     field = document.getElementById("set_temp_temp")
     field.value = parseInt(field.value, 10) + 1
     field.dispatchEvent(change)
 
   $(".decrease-temp").on "click touchend", (e) ->
+    e.preventDefault()
     field = document.getElementById("set_temp_temp")
     field.value = parseInt(field.value, 10) - 1
     field.dispatchEvent(change)
