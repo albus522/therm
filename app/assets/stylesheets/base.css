@@ -12,11 +12,11 @@ body {
   background-color: #373f48;
 }
 
-body.heating {
+.heating {
   background-color: #eb6d00;
 }
 
-body.cooling {
+.cooling {
   background-color: #0055ff;
 }
 
@@ -43,11 +43,20 @@ input[type=number] {
 .temp-action-group {
   text-align: center;
 }
-.temp-action, .temp-action:visited {
+.temp-action {
   color: #E7E6E6;
+  background: transparent;
   text-align: center;
   font-size: 4rem;
+  padding: 0;
+  border: none;
   margin: 10px;
+}
+.temp-action:disabled {
+  opacity: 0.25;
+}
+.temp-action img {
+  width: 64px;
 }
 input[type=submit] {
   display: block;
